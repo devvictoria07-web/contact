@@ -2,6 +2,7 @@ FROM php:8.2-apache
 
 # Install system dependencies & PHP extensions for Laravel
 RUN apt-get update && apt-get install -y \
+    ca-certificates \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
@@ -47,3 +48,4 @@ EXPOSE 80
 
 # Start Apache
 CMD ["apache2-foreground"]
+

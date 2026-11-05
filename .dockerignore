@@ -6,3 +6,4 @@ frontend/dist
 .env
 directcontact_backup.sql
 *.log
+
