@@ -19,6 +19,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Configure Apache DocumentRoot to Laravel's public directory
 ENV APACHE_DOCUMENT_ROOT /var/www/html/backend/public
