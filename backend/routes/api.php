@@ -25,6 +25,30 @@ Route::get('/categories/{slugOrId}', [PublicCategoryController::class, 'show']);
 
 Route::get('/cities', [PublicCityController::class, 'index']);
 Route::get('/stats', [StatsController::class, 'publicStats']);
+Route::get('/debug-db', function () {
+    try {
+        $count = \Illuminate\Support\Facades\DB::table('businesses')->count();
+        return response()->json([
+            'status' => 'connected',
+            'business_count' => $count,
+            'default_driver' => config('database.default'),
+            'host' => config('database.connections.mysql.host'),
+            'database' => config('database.connections.mysql.database'),
+            'username' => config('database.connections.mysql.username'),
+            'ssl_ca' => config('database.connections.mysql.options.' . PDO::MYSQL_ATTR_SSL_CA),
+        ]);
+    } catch (\Throwable $e) {
+        return response()->json([
+            'status' => 'error',
+            'message' => $e->getMessage(),
+            'code' => $e->getCode(),
+            'default_driver' => config('database.default'),
+            'host' => config('database.connections.mysql.host'),
+            'ssl_ca' => config('database.connections.mysql.options.' . PDO::MYSQL_ATTR_SSL_CA),
+            'trace' => explode("\n", $e->getTraceAsString()),
+        ], 200);
+    }
+});
 
 Route::prefix('auth')->group(function () {
     Route::post('/register', [AuthController::class, 'register']);
