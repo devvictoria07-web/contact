@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Phone,
@@ -16,6 +16,8 @@ interface BusinessCardProps {
 }
 
 export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
+  const [imgError, setImgError] = useState(false);
+
   // Limpiar número de WhatsApp para enlace
   const cleanWhatsapp = business.whatsapp?.replace(/[^0-9]/g, '') || '';
   const cleanPhone = business.phone?.replace(/[^0-9+]/g, '') || '';
@@ -28,18 +30,15 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
           <div className="flex items-center gap-3">
             {/* Business Logo */}
             <div className="w-16 h-16 rounded-xl bg-neutral-100 border border-neutral-200 overflow-hidden shrink-0 flex items-center justify-center p-0.5 shadow-inner">
-              {business.logo_url ? (
+              {business.logo_url && !imgError ? (
                 <img
                   src={business.logo_url}
                   alt={business.name}
                   className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform"
-                  onError={(e) => {
-                    // Fallback to placeholder icon
-                    (e.target as HTMLElement).style.display = 'none';
-                  }}
+                  onError={() => setImgError(true)}
                 />
               ) : (
-                <div className="w-full h-full bg-amber-100 text-amber-700 flex items-center justify-center font-black text-xl rounded-lg">
+                <div className="w-full h-full bg-amber-100 text-amber-700 flex items-center justify-center font-black text-xl rounded-lg uppercase">
                   {business.name.charAt(0)}
                 </div>
               )}

@@ -69,10 +69,14 @@ class Business extends Model
                 if (!$this->logo_path) {
                     return null;
                 }
-                if (str_starts_with($this->logo_path, 'http://') || str_starts_with($this->logo_path, 'https://')) {
+                if (
+                    str_starts_with($this->logo_path, 'http://') ||
+                    str_starts_with($this->logo_path, 'https://') ||
+                    str_starts_with($this->logo_path, 'data:')
+                ) {
                     return $this->logo_path;
                 }
-                return url(Storage::url($this->logo_path));
+                return '/storage/' . ltrim($this->logo_path, '/');
             }
         );
     }

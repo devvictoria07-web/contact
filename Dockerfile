@@ -41,6 +41,7 @@ WORKDIR /var/www/html/backend
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
 # Set permissions for storage & bootstrap/cache
+RUN rm -rf /var/www/html/backend/public/storage && php artisan storage:link
 RUN chown -R www-data:www-data /var/www/html/backend/storage /var/www/html/backend/bootstrap/cache
 RUN chmod -R 775 /var/www/html/backend/storage /var/www/html/backend/bootstrap/cache
 
