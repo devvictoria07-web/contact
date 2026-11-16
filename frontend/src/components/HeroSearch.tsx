@@ -50,7 +50,7 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({
   };
 
   return (
-    <div className="relative bg-gradient-to-b from-amber-400 to-amber-300 text-neutral-950 pt-10 pb-16 px-4 sm:px-6 lg:px-8 border-b border-amber-500/30">
+    <div className="relative bg-amber-400 text-neutral-950 pt-10 pb-16 px-4 sm:px-6 lg:px-8 border-b border-amber-500/30">
       <div className="max-w-5xl mx-auto text-center relative z-10">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-neutral-900 text-amber-400 text-xs font-bold px-4 py-1.5 rounded-full shadow-sm mb-4">

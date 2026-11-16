@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@theme {
+  --color-amber-50: #fefce8;
+  --color-amber-100: #fef8c3;
+  --color-amber-200: #fdef8a;
+  --color-amber-300: #fae24d;
+  --color-amber-400: #f7d400;
+  --color-amber-500: #dfb800;
+  --color-amber-600: #b89200;
+  --color-amber-700: #936e00;
+  --color-amber-800: #785707;
+  --color-amber-900: #65470c;
+  --color-amber-950: #3b2603;
+}
+
 @layer base {
   body {
     @apply bg-neutral-50 text-neutral-800 antialiased font-sans selection:bg-amber-400 selection:text-neutral-900;
