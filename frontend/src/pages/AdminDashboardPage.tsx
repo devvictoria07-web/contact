@@ -287,7 +287,7 @@ export const AdminDashboardPage: React.FC = () => {
                 </span>
               </div>
               <h1 className="text-2xl sm:text-3xl font-black text-white mt-0.5">
-                Páginas Amarillas Nicaragua
+                Nuevo Milenium Nicaragua
               </h1>
               <p className="text-xs text-neutral-400 mt-1">
                 Aprobación de negocios, gestión de categorías, ciudades y auditoría de la plataforma.

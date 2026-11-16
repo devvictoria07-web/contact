@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { BookOpen, Lock, Mail, AlertCircle, Users, ArrowRight } from 'lucide-react';
+import { Lock, Mail, AlertCircle, Users, ArrowRight } from 'lucide-react';
 
 export const LoginPage: React.FC = () => {
   const { login } = useAuth();
@@ -39,12 +39,14 @@ export const LoginPage: React.FC = () => {
       <div className="max-w-md w-full mx-auto space-y-8">
         {/* Brand Header */}
         <div className="text-center">
-          <Link to="/" className="inline-flex items-center space-x-2">
-            <div className="bg-amber-400 p-2.5 rounded-2xl text-neutral-950 shadow-sm">
-              <BookOpen className="w-7 h-7 stroke-[2.5]" />
-            </div>
+          <Link to="/" className="inline-flex items-center space-x-3">
+            <img
+              src="/logo-transparent.png"
+              alt="Nuevo Milenium"
+              className="w-12 h-12 object-contain drop-shadow-xs"
+            />
             <span className="text-2xl font-black tracking-tight text-neutral-900 uppercase">
-              Páginas<span className="text-amber-500">Amarillas</span>
+              Nuevo<span className="text-amber-500">Milenium</span>
             </span>
           </Link>
           <h2 className="mt-4 text-2xl font-black text-neutral-900">
@@ -59,15 +61,15 @@ export const LoginPage: React.FC = () => {
         <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200">
           <div className="flex items-center gap-1.5 text-xs font-bold text-amber-950 mb-2">
             <Users className="w-4 h-4 text-amber-700" />
-            <span>Cuentas de demostración (acceso rápido):</span>
+            <span>Cuentas de acceso rápido:</span>
           </div>
           <div className="grid grid-cols-3 gap-2">
             <button
               type="button"
-              onClick={() => fillQuickAccount('admin@paginasamarillas.com.ni', 'admin123')}
+              onClick={() => fillQuickAccount('admin@nuevomillenium.com.ni', 'admin123')}
               className="px-2.5 py-1.5 bg-white hover:bg-neutral-900 hover:text-amber-400 text-neutral-800 border border-neutral-300 rounded-lg text-[11px] font-bold text-center transition-all cursor-pointer shadow-2xs"
             >
-              👑 Administrador
+              👑 Admin
             </button>
             <button
               type="button"

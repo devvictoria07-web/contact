@@ -3,7 +3,6 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import type { UserRole } from '../types';
 import {
-  BookOpen,
   User,
   Mail,
   Lock,
@@ -68,19 +67,21 @@ export const RegisterUserPage: React.FC = () => {
       <div className="max-w-md w-full mx-auto space-y-6">
         {/* Header */}
         <div className="text-center">
-          <Link to="/" className="inline-flex items-center space-x-2">
-            <div className="bg-amber-400 p-2.5 rounded-2xl text-neutral-950 shadow-sm">
-              <BookOpen className="w-7 h-7 stroke-[2.5]" />
-            </div>
+          <Link to="/" className="inline-flex items-center space-x-3">
+            <img
+              src="/logo-transparent.png"
+              alt="Nuevo Milenium"
+              className="w-12 h-12 object-contain drop-shadow-xs"
+            />
             <span className="text-2xl font-black tracking-tight text-neutral-900 uppercase">
-              Páginas<span className="text-amber-500">Amarillas</span>
+              Nuevo<span className="text-amber-500">Milenium</span>
             </span>
           </Link>
           <h2 className="mt-4 text-2xl font-black text-neutral-900">
             Crear Nueva Cuenta
           </h2>
           <p className="mt-1 text-xs text-neutral-600">
-            Únete a la red comercial de contactos más grande de Nicaragua
+            Únete al directorio comercial y telefónico más grande de Nicaragua
           </p>
         </div>
 

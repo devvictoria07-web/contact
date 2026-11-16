@@ -240,7 +240,7 @@ export const OwnerDashboardPage: React.FC = () => {
               Aún no tienes negocios registrados
             </h2>
             <p className="text-xs text-neutral-500 max-w-sm mx-auto mb-6">
-              Empieza ahora publicando tu primer establecimiento comercial para aparecer en las Páginas Amarillas de Nicaragua.
+              Empieza ahora publicando tu primer establecimiento comercial para aparecer en el Directorio Nuevo Milenium.
             </p>
             <Link
               to="/register-business"
@@ -263,7 +263,7 @@ export const OwnerDashboardPage: React.FC = () => {
             <div className="text-center">
               <h3 className="text-base font-bold text-neutral-900">¿Eliminar este negocio?</h3>
               <p className="text-xs text-neutral-500 mt-1">
-                Esta acción es irreversible y retirará el negocio de forma permanente de las Páginas Amarillas.
+                Esta acción es irreversible y retirará el negocio de forma permanente de Nuevo Milenium.
               </p>
             </div>
             <div className="flex gap-2">

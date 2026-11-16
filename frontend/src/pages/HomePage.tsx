@@ -57,7 +57,7 @@ export const HomePage: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-x divide-neutral-100">
             <div className="p-2">
               <span className="block text-2xl sm:text-3xl font-black text-neutral-900">
-                {stats?.total_businesses ?? 15}+
+                {stats?.total_businesses ? `${stats.total_businesses.toLocaleString()}+` : '6,400+'}
               </span>
               <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wider">
                 Negocios en Directorio
@@ -202,10 +202,10 @@ export const HomePage: React.FC = () => {
         <section className="bg-amber-100/60 rounded-3xl p-8 sm:p-12 border border-amber-300/50">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <h3 className="text-2xl sm:text-3xl font-black text-neutral-900 uppercase">
-              ¿Por qué buscar en Páginas Amarillas Nicaragua?
+              ¿Por qué buscar en Nuevo Milenium?
             </h3>
             <p className="text-sm text-neutral-700 mt-2">
-              El canal más directo para conectar consumidores nicaragüenses con proveedores locales confiables.
+              El directorio comercial y telefónico más completo para conectar consumidores con empresas y comercios locales de Nicaragua.
             </p>
           </div>
 

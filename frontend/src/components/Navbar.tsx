@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import {
-  BookOpen,
   PlusCircle,
   LogOut,
   ShieldCheck,
@@ -51,20 +50,22 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="bg-amber-400 p-2 rounded-xl text-neutral-950 group-hover:bg-amber-500 transition-colors shadow-sm">
-              <BookOpen className="w-6 h-6 stroke-[2.5]" />
-            </div>
+            <img
+              src="/logo-transparent.png"
+              alt="Nuevo Milenium"
+              className="w-11 h-11 object-contain drop-shadow-xs group-hover:scale-105 transition-transform"
+            />
             <div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1.5">
                 <span className="text-xl font-black tracking-tight text-neutral-900 uppercase">
-                  Páginas<span className="text-amber-500">Amarillas</span>
+                  Nuevo<span className="text-amber-500">Milenium</span>
                 </span>
-                <span className="text-[10px] font-bold uppercase tracking-wider bg-neutral-900 text-amber-400 px-1.5 py-0.5 rounded">
-                  NI
+                <span className="text-[10px] font-black uppercase tracking-wider bg-neutral-900 text-amber-400 px-1.5 py-0.5 rounded">
+                  PANM
                 </span>
               </div>
-              <p className="text-[10px] font-semibold text-neutral-500 tracking-wide">
-                Directorio Comercial y de Contactos
+              <p className="text-[10px] font-bold text-neutral-500 tracking-wide uppercase">
+                Directorio Comercial y Telefónico
               </p>
             </div>
           </Link>

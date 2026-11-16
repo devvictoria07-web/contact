@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Phone, Mail, MapPin, Shield } from 'lucide-react';
+import { Phone, Mail, MapPin, Shield } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -31,12 +31,14 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Columna 1: Marca & Contacto */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="bg-amber-400 p-2 rounded-lg text-neutral-950">
-                <BookOpen className="w-5 h-5 stroke-[2.5]" />
-              </div>
+            <div className="flex items-center space-x-2.5">
+              <img
+                src="/logo-transparent.png"
+                alt="Nuevo Milenium"
+                className="w-8 h-8 object-contain"
+              />
               <span className="text-lg font-black tracking-tight text-white uppercase">
-                Páginas<span className="text-amber-400">Amarillas</span> NI
+                Nuevo<span className="text-amber-400">Milenium</span> PANM
               </span>
             </div>
             <p className="text-xs text-neutral-400 leading-relaxed">
@@ -53,7 +55,7 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>contacto@paginasamarillas.com.ni</span>
+                <span>contacto@nuevomilenium.com.ni</span>
               </div>
             </div>
           </div>
@@ -186,9 +188,9 @@ export const Footer: React.FC = () => {
 
         {/* Barra inferior */}
         <div className="pt-8 border-t border-neutral-800 text-xs text-neutral-500 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© {new Date().getFullYear()} Páginas Amarillas Nicaragua. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Páginas Amarillas Nuevo Milenium (PANM). Todos los derechos reservados.</p>
           <div className="flex items-center space-x-6">
-            <span>Laravel 13 REST API + React 19 + TypeScript</span>
+            <span>Directorio Telefónico y Comercial</span>
             <span className="text-amber-400 font-bold">Nicaragua</span>
           </div>
         </div>

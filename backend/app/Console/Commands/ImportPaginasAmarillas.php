@@ -186,8 +186,8 @@ class ImportPaginasAmarillas extends Command
             $bizId = $maxId;
 
             $allPhonesStr = implode(', ', array_unique($b['phones']));
-            $description = "Contacto comercial verificado del Directorio Telefónico Páginas Amarillas Nicaragua 2025 (Página {$b['page']}). Teléfonos registrados: {$allPhonesStr}.";
-            $shortDesc = Str::limit("Directorio Páginas Amarillas Nicaragua 2025 - Tel: {$b['primary_phone']}", 250, '');
+            $description = "Contacto comercial verificado del Directorio Telefónico Nuevo Milenium Nicaragua 2025 (Página {$b['page']}). Teléfonos registrados: {$allPhonesStr}.";
+            $shortDesc = Str::limit("Directorio Nuevo Milenium Nicaragua 2025 - Tel: {$b['primary_phone']}", 250, '');
             $cleanAddress = !empty($b['address']) ? Str::limit($b['address'], 400, '') : 'Managua, Nicaragua';
 
             $businessesToInsert[] = [

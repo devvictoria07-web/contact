@@ -55,7 +55,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
                   {business.name}
                 </Link>
                 {business.status === 'approved' && (
-                  <span title="Verificado por Páginas Amarillas">
+                  <span title="Verificado en Directorio Nuevo Milenium">
                     <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                   </span>
                 )}
@@ -131,7 +131,7 @@ export const BusinessCard: React.FC<BusinessCardProps> = ({ business }) => {
             <a
               href={`https://wa.me/${cleanWhatsapp}?text=Hola%20${encodeURIComponent(
                 business.name
-              )},%20te%20contacto%20desde%20Páginas%20Amarillas%20Nicaragua.`}
+              )},%20te%20contacto%20desde%20Nuevo%20Milenium%20Nicaragua.`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-colors"

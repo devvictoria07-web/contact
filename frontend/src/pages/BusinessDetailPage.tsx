@@ -239,7 +239,7 @@ export const BusinessDetailPage: React.FC = () => {
               <a
                 href={`https://wa.me/${cleanWhatsapp}?text=Hola%20${encodeURIComponent(
                   business.name
-                )},%20te%20contacto%20desde%20Páginas%20Amarillas%20Nicaragua.`}
+                )},%20te%20contacto%20desde%20Nuevo%20Milenium%20Nicaragua.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl text-xs sm:text-sm transition-all shadow-sm"
@@ -360,7 +360,7 @@ export const BusinessDetailPage: React.FC = () => {
 
               {/* Información adicional */}
               <div className="pt-2 border-t border-neutral-100 text-[11px] text-neutral-400 space-y-1">
-                <p>Publicado en Páginas Amarillas Nicaragua</p>
+                <p>Publicado en Directorio Comercial Nuevo Milenium</p>
                 <p>Código de Ficha: #{business.id}</p>
               </div>
             </div>

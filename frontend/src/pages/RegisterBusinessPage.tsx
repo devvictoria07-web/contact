@@ -164,7 +164,7 @@ export const RegisterBusinessPage: React.FC = () => {
           </div>
           <h2 className="text-2xl font-black text-neutral-900 mb-2">Registra tu Negocio</h2>
           <p className="text-xs text-neutral-600 mb-6">
-            Para publicar y gestionar tu negocio en las Páginas Amarillas de Nicaragua, inicia sesión o crea una cuenta gratis en menos de un minuto.
+            Para publicar y gestionar tu negocio en el Directorio Nuevo Milenium de Nicaragua, inicia sesión o crea una cuenta gratis en menos de un minuto.
           </p>
           <div className="space-y-3">
             <Link
@@ -194,7 +194,7 @@ export const RegisterBusinessPage: React.FC = () => {
             Formulario de Registro
           </span>
           <h1 className="text-3xl font-black text-neutral-900 uppercase">
-            Registra tu Empresa en Páginas Amarillas
+            Registra tu Empresa en Nuevo Milenium
           </h1>
           <p className="text-xs sm:text-sm text-neutral-600 mt-1 max-w-xl mx-auto">
             Completa la ficha técnica para que miles de nicaragüenses puedan contactarte por llamada, WhatsApp y visitarte en tu local.

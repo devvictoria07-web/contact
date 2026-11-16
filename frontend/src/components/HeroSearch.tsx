@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, MapPin, Tag, ArrowRight, BookOpen } from 'lucide-react';
+import { Search, MapPin, Tag, ArrowRight } from 'lucide-react';
 import type { Category, City } from '../types';
 import { api } from '../services/api';
 
@@ -50,22 +50,19 @@ export const HeroSearch: React.FC<HeroSearchProps> = ({
   };
 
   return (
-    <div className="relative bg-gradient-to-b from-amber-400 via-amber-400 to-amber-300 text-neutral-950 pt-10 pb-16 px-4 sm:px-6 lg:px-8 border-b border-amber-500/30">
-      {/* Decorative background pattern */}
-      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
-
+    <div className="relative bg-gradient-to-b from-amber-400 to-amber-300 text-neutral-950 pt-10 pb-16 px-4 sm:px-6 lg:px-8 border-b border-amber-500/30">
       <div className="max-w-5xl mx-auto text-center relative z-10">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-neutral-900 text-amber-400 text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm mb-4">
-          <BookOpen className="w-3.5 h-3.5" />
-          <span>DIRECTORIO COMERCIAL Y TELEFÓNICO DE NICARAGUA</span>
+        <div className="inline-flex items-center gap-2 bg-neutral-900 text-amber-400 text-xs font-bold px-4 py-1.5 rounded-full shadow-sm mb-4">
+          <img src="/logo-transparent.png" alt="PANM" className="w-4 h-4 object-contain" />
+          <span>PÁGINAS AMARILLAS NUEVO MILENIUM • NICARAGUA</span>
         </div>
 
         <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-neutral-950 mb-4 uppercase">
-          Encuentra lo que necesitas en las <span className="underline decoration-neutral-900 decoration-4">Páginas Amarillas</span>
+          Encuentra lo que necesitas en <span className="underline decoration-neutral-900 decoration-4">Nuevo Milenium</span>
         </h1>
         <p className="text-base sm:text-lg text-neutral-800 font-medium max-w-2xl mx-auto mb-8">
-          Teléfonos, WhatsApp, direcciones y horarios de restaurantes, farmacias, ferreterías, servicios profesionales y más en toda Nicaragua.
+          Teléfonos, WhatsApp, direcciones y horarios de comercios, empresas y profesionales en toda Nicaragua.
         </p>
 
         {/* Search Bar Container */}
