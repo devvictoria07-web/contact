@@ -6,27 +6,6 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-neutral-900 text-neutral-300 pt-12 pb-8 border-t-4 border-amber-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Callout para dueños de negocios */}
-        <div className="bg-neutral-800 rounded-2xl p-6 sm:p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 border border-neutral-700 shadow-md">
-          <div className="space-y-2 text-center md:text-left">
-            <span className="inline-block px-3 py-1 bg-amber-400/20 text-amber-400 text-xs font-bold rounded-full uppercase tracking-wider">
-              Para Empresas y Emprendedores
-            </span>
-            <h3 className="text-xl sm:text-2xl font-black text-white">
-              ¿Tienes un negocio en Nicaragua? ¡Haz que te encuentren!
-            </h3>
-            <p className="text-neutral-400 text-sm max-w-2xl">
-              Publica tu negocio de forma rápida y gratuita en el directorio comercial más completo del país. Muestra tu teléfono, WhatsApp, horarios, dirección y redes sociales.
-            </p>
-          </div>
-          <Link
-            to="/register-business"
-            className="whitespace-nowrap bg-amber-400 hover:bg-amber-300 text-neutral-950 font-black px-6 py-3.5 rounded-xl text-sm transition-all shadow-lg hover:shadow-amber-400/20 transform hover:-translate-y-0.5"
-          >
-            Registrar Mi Negocio Gratis
-          </Link>
-        </div>
-
         {/* 4 Columnas principales */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Columna 1: Marca & Contacto */}
